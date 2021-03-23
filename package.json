@@ -1,6 +1,6 @@
 {
-  "name": "use-update-effect",
-  "version": "0.1.0",
+  "name": "use-update",
+  "version": "1.0.0",
   "description": "Component Did Update lifecycle method as a hook",
   "repository": {
     "type": "git",

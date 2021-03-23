@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 function usePrevious(value) {
   const ref = useRef();
@@ -10,7 +10,7 @@ function usePrevious(value) {
   return ref.current;
 }
 
-export function useUpdateEffect(effect, dependencies = null) {
+export function useUpdate(effect, dependencies = null) {
   const [renderState, setRenderState] = useState('first render');
   const [isPrevStateWasSet, setIsPrevStateWasSet] = useState(false);
 
@@ -20,7 +20,7 @@ export function useUpdateEffect(effect, dependencies = null) {
     setRenderState('not first render');
   }, []);
 
-  const dependenciesList = dependencies ? [...dependencies, renderState, isPrevStateWasSet] : [renderState, isPrevStateWasSet];
+  const dependenciesList = dependencies ? [...dependencies, renderState] : [renderState];
 
   useEffect(() => {
     if (!prevRenderState) {
