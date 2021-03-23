@@ -10,7 +10,9 @@ export function useUpdate(effect, dependencies) {
     } else {
       if (prevDependencies.current !== JSON.stringify(dependencies)) {
         prevDependencies.current = JSON.stringify(dependencies);
-        effect();
+        const clear = effect();
+
+        return clear;
       }
     }
   }, [dependencies]);
