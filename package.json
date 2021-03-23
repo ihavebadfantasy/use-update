@@ -1,38 +1,28 @@
 {
-  "name": "use-update",
+  "name": "use-update-effect",
   "version": "0.1.0",
   "description": "Component Did Update lifecycle method as a hook",
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ihavebadfantasy/use-update"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "bugs": {
+    "url": "https://github.com/ihavebadfantasy/use-update/issues"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "homepage": "https://github.com/ihavebadfantasy/use-update",
+  "keywords": [
+    "react",
+    "hooks",
+    "componentDidUpdate",
+    "side-effects",
+    "useEffect"
+  ],
+  "author": "ihavebadfantasy",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "react": "^16.9.0"
   }
 }
