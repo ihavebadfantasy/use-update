@@ -1,6 +1,10 @@
 import { useEffect, useRef } from 'react';
 
 export function useUpdate(effect, dependencies) {
+  if (Array.isArray(dependencies) && dependencies.length === 0) {
+    dependencies = null;
+  }
+
   const isFirstRender = useRef(true);
   const prevDependencies = useRef(JSON.stringify(dependencies));
 
@@ -8,12 +12,12 @@ export function useUpdate(effect, dependencies) {
     if (isFirstRender.current) {
       isFirstRender.current = false;
     } else {
-      if (prevDependencies.current !== JSON.stringify(dependencies)) {
+      if (!dependencies || prevDependencies.current !== JSON.stringify(dependencies)) {
         prevDependencies.current = JSON.stringify(dependencies);
         const clear = effect();
 
         return clear;
       }
     }
-  }, [dependencies]);
+  }, dependencies);
 }
