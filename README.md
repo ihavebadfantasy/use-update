@@ -11,8 +11,8 @@ $ yarn add use-update
 ## How to use
 
 You use useUpdate almost the same way as useEffect. 
-When it is given the list of dependencies it will run when any dependence from the list will change after the first render.
-When it is given an empty array as a dependencies or no dependencies argument(undefined) it will work like componentDidMount and triggered on every state or props update after the first render.
+When it is given the list of dependencies useUpdate is invoked when any dependence from the list change occurs.
+When it is given an empty array as a dependencies or no dependencies argument(undefined) it will work like componentDidMount and is invoked immediately after updating of state or props occurs.
 
 ### Sync example
 
